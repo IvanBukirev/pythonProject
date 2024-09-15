@@ -9,7 +9,7 @@ def multiplication_check(x, y):
     return x * y == simple_multiplication(x, y)
 
 
-def multiplication_check_list(start=10, stop=99):
+def multiplication_check_list_1(start=10, stop=99):
     n = 0
     m = 0
     for i in range(start, stop + 1):
@@ -32,16 +32,16 @@ def wisdom_multiplication(x, y, length_check=True):
     else:
         return int(str(one) + str(two))
 
-def multiplication_check_list_2(start=10, stop=99, length_check = True):
+def multiplication_check_list(start=10, stop=99, length_check = True):
     n = 0
     m = 0
     for i in range(start, stop + 1):
         for j in range(start, stop + 1):
-            if multiplication_check(i, j):
+            if wisdom_multiplication(i, j, length_check)==i*j:
                 n += 1
             else:
                 m += 1
     print(f'Правильных результатов: {n}')
     print(f'Неправильных результатов: {m}')
 
-
+multiplication_check_list(98, 99, False)
