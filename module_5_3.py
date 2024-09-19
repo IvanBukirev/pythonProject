@@ -21,25 +21,22 @@ class House:
         if isinstance(other.number_of_floors, int) and isinstance(other, House):
             return self.number_of_floors == other.number_of_floors
 
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
     def __lt__(self, other):
         if isinstance(other.number_of_floors, int) and isinstance(other, House):
             return self.number_of_floors < other.number_of_floors
 
     def __le__(self, other):
-        if isinstance(other.number_of_floors, int) and isinstance(other, House):
-            return self.number_of_floors <= other.number_of_floors
+        return self.__lt__(other) or self.__eq__(other)
 
     def __gt__(self, other):
         if isinstance(other.number_of_floors, int) and isinstance(other, House):
             return self.number_of_floors > other.number_of_floors
 
     def __ge__(self, other):
-        if isinstance(other.number_of_floors, int) and isinstance(other, House):
-            return self.number_of_floors >= other.number_of_floors
-
-    def __ne__(self, other):
-        if isinstance(other.number_of_floors, int) and isinstance(other, House):
-            return self.number_of_floors != other.number_of_floors
+        return self.__gt__(other) or self.__eq__(other)
 
     def __add__(self, value):
         if isinstance(value, int):
