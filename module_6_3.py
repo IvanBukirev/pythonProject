@@ -28,26 +28,26 @@ voice - который печатает значение унаследован�
 
 
 class Horse:
-    def __init__(self, x_distance=0, y_distance=0,sound='Frrr'):
-        self.x_distance = x_distance
-        self.sound = sound
+    def __init__(self, y_distance=0):
+        self.x_distance = 0
+        self.sound = 'Frrr'
         super().__init__(y_distance)
 
     def run(self, dx):
         self.x_distance += dx
 
 class Eagle:
-     def __init__(self, y_distance=0, sound='I train, eat, sleep, and repeat'):
+     def __init__(self, y_distance=0):
          self.y_distance = y_distance
-         self.sound = sound
+         self.sound = 'I train, eat, sleep, and repeat'
 
      def fly(self, dy):
          self.y_distance += dy
 
 
 class Pegasus(Horse, Eagle):
-    def __init__(self,x_distance=0, y_distance=0, sound=""):
-        super().__init__(x_distance, y_distance, sound)
+    def __init__(self):
+        super().__init__()
 
     def move(self, dx, dy):
         self.run(dx)
