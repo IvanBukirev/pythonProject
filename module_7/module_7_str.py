@@ -37,4 +37,4 @@ elif score_1 < score_2 or score_1 == score_2 and team1_time < team2_time:
 else:
     challenge_result = 'Ничья'
 
-fprint(score_1, score_2, challenge_result, tasks_total, time_avg)
+print_f(score_1, score_2, challenge_result, tasks_total, time_avg)
