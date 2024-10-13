@@ -7,13 +7,13 @@ def personal_sum(numbers):
         except TypeError:
             print(f'Некорректный тип данных для подсчёта суммы - {number}')
             incorrect_data += 1
-    return (result, incorrect_data)
+    return result, incorrect_data
 
 
 def calculate_average(numbers):
     try:
-        sum = personal_sum(numbers)
-        return sum[0] / (len(numbers) - sum[1]) if len(numbers) - sum[1] else sum[0] / len(numbers)
+        sum_ = personal_sum(numbers)
+        return sum_[0] / (len(numbers) - sum_[1]) if len(numbers) - sum_[1] else sum_[0] / len(numbers)
     except ZeroDivisionError:
         print('Передана пустая коллекция')
         return 0
