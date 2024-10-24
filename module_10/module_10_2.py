@@ -21,8 +21,8 @@ class Knight(Thread):
         print(f"{self.name} одержал победу спустя {count_knight} дней(дня)!")
 
 
-first_knight = Knight('Sir Lancelot', 35)
-second_knight = Knight("Sir Galahad", 17)
+first_knight = Knight('Sir Lancelot', 27)
+second_knight = Knight("Sir Galahad", 19)
 first_knight.start()
 second_knight.start()
 first_knight.join()
