@@ -1,5 +1,7 @@
 import time
 from multiprocessing import Pool
+
+
 def read_info(name):
     all_data=[]
     with open(name, 'r', encoding='utf-8') as f:
