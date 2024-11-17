@@ -50,7 +50,7 @@ class Matplotlib:
 
 # PIL
 class Pillow:
-    image = Image.open(r'C:\Users\ivan\PycharmProjects\pythonProject\module_11\module_11_1\image.jpg')
+    image = Image.open(r'C:\Users\ivan\PycharmProjects\pythonProject\module_11\image.jpg')
     resized_image = image.resize((800, 800))  # изменение размера на 800 x 800 пикселей
     resized_image.save('resized_image.jpg')
 
