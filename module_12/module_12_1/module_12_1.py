@@ -1,28 +1,29 @@
 import unittest
-from module_12.module_12_1.runner import Runner
+import runner
+
 
 
 class RunnerTest(unittest.TestCase):
 
     def test_walk(self):
-        runner = Runner('Ivan')
+        run_1= runner.Runner('runner')
         for _ in range(10):
-            runner.walk()
-        self.assertEqual(runner.distance, 50)
+            run_1.walk()
+        self.assertEqual(run_1.distance, 50)
 
     def test_run(self):
-        runner = Runner('runner')
+        run_2=runner.Runner('runner2')
         for _ in range(10):
-            runner.run()
-        self.assertEqual(runner.distance, 100)
+            run_2.run()
+        self.assertEqual(run_2.distance, 100)
 
     def test_challenge(self):
-        runner = Runner('runner')
-        runner2= Runner('runner2')
+        run_3 = runner.Runner('runner3')
+        run_4=runner.Runner('runner4')
         for _ in range(10):
-            runner.run()
-            runner2.walk()
-        self.assertNotEqual(runner.distance, runner2.distance)
+            run_3.run()
+            run_4.walk()
+        self.assertNotEqual(run_3.distance, run_4.distance)
 
 
 
