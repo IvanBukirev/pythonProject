@@ -1,6 +1,5 @@
 import unittest
-import runner
-
+from module_12.module_12_1 import runner
 
 
 class RunnerTest(unittest.TestCase):

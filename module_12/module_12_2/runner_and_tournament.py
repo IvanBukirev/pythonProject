@@ -41,12 +41,6 @@ class Tournament:
 
         return finishers
 
-runner1 = Runner('Усэйн', 10)
-runner2 = Runner('Андрей', 9)
-runner3 = Runner('Ник', 3)
 
 
-gon= Tournament(6, runner1, runner2, runner3)
-finishers = gon.start()
-for place, runner in finishers.items():
-    print(f'{place} место: {runner}')
+
