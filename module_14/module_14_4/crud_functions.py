@@ -13,7 +13,7 @@ def initiate_db():
     )
     ''')
 
-    c.execute("CREATE INDEX IF NOT EXISTS idx_id ON Products(id)")
+
 
     conn.commit()
     conn.close()
